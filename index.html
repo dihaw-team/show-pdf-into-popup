@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pdf Pop up</title>
+
+</head>
+<body ng-app="myApp" ng-controller="PdfController" ng-cloak>
+  
+   <h2>{{title}}</h2>
+
+  <img id="picToClick" data-toggle="modal" data-target="#pdfModal" src="img/Adobe-icon.png" ng-hide="1===1"> 
+  <button ng-click="showPdf()">Click me</button>
+
+
+
+    <!--pdfModal -->
+    <div id="pdfModal" class="modal fade" role="dialog">
+      <div class="modal-dialog " >
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+          <div class="modal-header" >
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">{{title}}</h2>
+          </div>
+
+          <div class="modal-body">
+            <object type="application/pdf" data="{{pathToPdf}}" width="100%" height="500"></object>
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  <!-- load css lib --> 
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/bower_components/ngprogress/ngProgress.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Load this required lib -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/ngprogress/build/ngprogress.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Load js files -->
+  <script type="text/javascript" src="js/modulePdfPopUp.js"></script>
+  <script type="text/javascript" src="js/servicePdfPopUp.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Amine Berguiga",
+  "mail": "m.a.berguiga@gmail.Com",
+  "version": 1,
+  "demo": true,
+  "description": "thsi example is used to show how can i show Pdf into popup",
+  "pdfLocation": "https://www.openoffice.org/fr/Documentation/How-to/General/02pdffr.pdf"
+}
